@@ -1,0 +1,24 @@
+TITLE:
+Enable VOLTE function from UI , insert VOLTE-enabled card, VOLTE function cannot be used
+
+
+1.Reason analysis: IMS_enable NV67218 value is 0, resulting in ims not enabled;GM Pass
+
+HOw to ready those CPP FILE ?
+
+IMS/High                  12:09:56.736          ims_task.cpp  03100  IMSTASK_SET_STATE 0 -> 0
+IMS/High                  12:09:56.736          ims_task.cpp  03101  IMSTASK#$$#0#ims_task State Set to STATE_INITIAL
+IMS/High                  12:09:56.736          ims_task.cpp  03102  IMSTASK#>>#IMS_APP#0#ims_regmanager_init
+IMS/High                  12:09:56.736          ims_task.cpp  00521  imstask_conf_file_create: begin
+IMS/High                  12:09:56.757                qpIO.c  00458  qpDplIODeviceGetItembySubs: NV_file[/nv/item_files/ims/IMS_enable]
+IMS/Error                 12:10:02.059          ims_task.cpp  03217  ims_task failed / Disabled in NV settings ims_enabled 0
+
+
+It seems that you do no enable QC IMS solution. 
+
+MSG [00051/03] IMS/Error 12:08:03.249 ims_task.cpp 03217 ims_task failed / Disabled in NV settings ims_enabled 0 
+MSG [00051/03] IMS/Error 12:08:08.250 ims_task.cpp 03217 ims_task failed / Disabled in NV settings ims_enabled 0 
+
+TITLE:
+CMCC requires that VOLTE be turned off by default and applications provide VOLTE switches.* DTS2015071601683 
+
