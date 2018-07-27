@@ -19,6 +19,9 @@ It seems that you do no enable QC IMS solution.
 MSG [00051/03] IMS/Error 12:08:03.249 ims_task.cpp 03217 ims_task failed / Disabled in NV settings ims_enabled 0 
 MSG [00051/03] IMS/Error 12:08:08.250 ims_task.cpp 03217 ims_task failed / Disabled in NV settings ims_enabled 0 
 
+conculsion:
+if volte is not attach mease cross check the ims error message get conform on NV 67218.
+
 TITLE:
 CMCC requires that VOLTE be turned off by default and applications provide VOLTE switches.* DTS2015071601683 
 
